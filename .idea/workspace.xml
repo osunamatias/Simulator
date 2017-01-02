@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae4584b-23ef-4131-a674-cb2690f47e4c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pipe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index-new.php" afterPath="$PROJECT_DIR$/index-new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pipe.php" afterPath="$PROJECT_DIR$/pipe.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -194,8 +193,8 @@
       <file leaf-file-name="pipe.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pipe.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="119">
+              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -254,6 +253,7 @@
         <option value="$PROJECT_DIR$/weight_query.php" />
         <option value="$PROJECT_DIR$/ajax.js" />
         <option value="$PROJECT_DIR$/index-new.php" />
+        <option value="$PROJECT_DIR$/pipe.php" />
       </list>
     </option>
   </component>
@@ -409,12 +409,12 @@
       <workItem from="1483115230924" duration="6348000" />
       <workItem from="1483358415900" duration="1112000" />
       <workItem from="1483360378951" duration="721000" />
-      <workItem from="1483363601272" duration="1041000" />
+      <workItem from="1483363601272" duration="1251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38102000" />
+    <option name="totallyTimeSpent" value="38312000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1084,8 +1084,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pipe.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="119">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
         </state>
       </provider>
