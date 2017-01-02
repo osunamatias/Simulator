@@ -5,8 +5,6 @@ $valor = $_POST["diameter"];
 
 $my_query1 = "SELECT DISTINCT WEIGHT FROM casing WHERE OD = " . $valor . " ORDER BY WEIGHT";
 
-echo $my_query1;
-
 if ($result=mysqli_query($dbh, $my_query1))
 {
     // Fetch one and one row

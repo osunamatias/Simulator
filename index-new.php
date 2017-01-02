@@ -224,7 +224,7 @@ require ("connection_db.php");
 
                             <option value="">Select</option>
 
-                            <option id="id_casings_value_1" value="1">1</option>
+                            <option id="id_casings_value_1" selected value="1">1</option>
 
                             <option value="2">2</option>
 
@@ -234,7 +234,7 @@ require ("connection_db.php");
                     </div>
 
                     <!-- Casing 1 Section -->
-                    <div id="casing1_div" class="display--inline-block margin--8 casing_div">
+                    <div id="casing1_div" class="display--inline-block margin--8">
 
                         <span class="mdl-card__supporting-text"><b>Casing 1</b></span><br>
 
@@ -258,7 +258,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Weight (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <select class="float-right required_casing_1" name="casing_weight" id="id_casing_weight" onchange="loadOD('id_casing_od','id_casing2_od',this.value)">
+                                    <select class="float-right required_casing_1" name="casing_weight" id="id_casing_weight" onchange="loadOD('id_casing_od','id_casing2_od',this.value); loadPipe('id_casing_od',this.id,'id_casing_grade')">
 
                                         <option value="">Select</option>
                                         <!-- Traer tabla con ajax -->
@@ -274,7 +274,6 @@ require ("connection_db.php");
                                     <select class="float-right required_casing_1" name="casing_grade" id="id_casing_grade">
 
                                         <option value="">Select</option>
-                                        <option value="dummy">Dummy</option>
                                         <!-- Traer tabla con ajax -->
 
                                     </select>
@@ -285,7 +284,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Sheath (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <select class="float-right required_casing_1" name="casing_seath" id="id_casing_seath" onchange="casingSeathChange()">
+                                    <select class="float-right required_casing_1" name="casing_seath" id="id_casing_seath" onchange="casingSeathChange(this.value,'id_fluid_weight_input1','id_cement_input1')">
 
                                         <option value="">Select</option>
                                         <option value="Cement">Cement</option>
@@ -299,7 +298,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Fluid Weight (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <input class="float-right required_casing_1" type="number" step="any" min="0" max="10000">
+                                    <input class="float-right required_casing_1" id="id_fluid_weight_input1" type="number" step="any" min="0" max="10000">
 
                                 </div>
 
@@ -307,7 +306,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Cement String (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <input  class="float-right required_casing_1" type="number" step="any" min="0" max="10000">
+                                    <input  class="float-right required_casing_1" id="id_cement_input1" type="number" step="any" min="0" max="10000">
 
                                 </div>
                             </div>
@@ -341,7 +340,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Weight (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <select class="float-right required_casing_2" name="casing2_weight" id="id_casing2_weight" onchange="loadOD('id_casing2_od','id_casing3_od',this.value)">
+                                    <select class="float-right required_casing_2" name="casing2_weight" id="id_casing2_weight" onchange="loadOD('id_casing2_od','id_casing3_od',this.value);loadPipe('id_casing2_od',this.id,'id_casing2_grade')">
 
                                         <option value="">Select</option>
                                         <!-- Traer tabla con ajax -->
@@ -367,10 +366,11 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Sheath (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <select class="float-right required_casing_2" name="casing2_seath" id="id_casing2_seath">
+                                    <select class="float-right required_casing_2" name="casing2_seath" id="id_casing2_seath" onchange="casingSeathChange(this.value,'id_fluid_weight_input2','id_cement_input2')">
 
                                         <option value="">Select</option>
-                                        <!-- Traer tabla con ajax -->
+                                        <option value="Cement">Cement</option>
+                                        <option value="Fluid">Fluid</option>
 
                                     </select>
 
@@ -380,7 +380,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Fluid Weight (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <input class="float-right required_casing_2" id="id_casing2_fweight" type="number" step="any" min="0" max="10000">
+                                    <input class="float-right required_casing_2"  id="id_fluid_weight_input2" type="number" step="any" min="0" max="10000">
 
                                 </div>
 
@@ -388,7 +388,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Cement String (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <input  class="float-right required_casing_2" id="id_casing2_cstring" type="number" step="any" min="0" max="10000">
+                                    <input  class="float-right required_casing_2" id="id_cement_input2" type="number" step="any" min="0" max="10000">
 
                                 </div>
                             </div>
@@ -423,7 +423,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Weight(<span style="color: #fe1624;">*</span>)</span>
 
-                                    <select class="float-right required_casing_3" name="casing3_weight" id="id_casing3_weight">
+                                    <select class="float-right required_casing_3" name="casing3_weight" id="id_casing3_weight" onchange="loadPipe('id_casing3_od',this.id,'id_casing3_grade')">
 
                                         <option value="">Select</option>
                                         <!-- Traer tabla con ajax -->
@@ -449,10 +449,11 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Sheath (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <select class="float-right required_casing_3" name="casing3_seath" id="id_casing3_seath">
+                                    <select class="float-right required_casing_3" name="casing3_seath" id="id_casing3_seath" onchange="casingSeathChange(this.value,'id_fluid_weight_input3','id_cement_input3')">
 
                                         <option value="">Select</option>
-                                        <!-- Traer tabla con ajax -->
+                                        <option value="Cement">Cement</option>
+                                        <option value="Fluid">Fluid</option>
 
                                     </select>
 
@@ -462,14 +463,14 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Fluid Weight (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <input class="float-right required_casing_3" type="number" step="any" min="0" max="10000" id="id_casing3_fweight">
+                                    <input class="float-right required_casing_3" type="number" step="any" min="0" max="10000"  id="id_fluid_weight_input3">
 
                                 </div>
                                 <div class="margin--4">
 
                                     <span class="mdl-card__supporting-text">Cement String (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <input  class="float-right required_casing_3" type="number" step="any" min="0" max="10000" id="id_casing3_cstring">
+                                    <input  class="float-right required_casing_3" type="number" step="any" min="0" max="10000" id="id_cement_input3">
 
                                 </div>
                             </div>
@@ -714,32 +715,64 @@ require ("connection_db.php");
      *  Method used to change the visibility of the
      *  casings inputs when the quantity is selected
      *  */
-    function refreshCasings(casing_number){
-        switch (casing_number){
+    function refreshCasings(casing_number) {
+        switch (casing_number) {
             case "1":
+                disableCInputs(1);
                 $("#casing1_div").fadeIn(200);
                 $("#casing2_div").fadeOut(200);
                 $("#casing3_div").fadeOut(200);
                 break;
 
             case "2":
+                disableCInputs(2);
                 $("#casing1_div").fadeIn(200);
                 $("#casing2_div").fadeIn(200);
                 $("#casing3_div").fadeOut(200);
                 break;
 
             case "3":
+                disableCInputs(3);
                 $("#casing1_div").fadeIn(200);
                 $("#casing2_div").fadeIn(200);
                 $("#casing3_div").fadeIn(200);
                 break;
 
             case "":
+                disableCInputs(0);
                 $("#casing1_div").fadeOut(200);
                 $("#casing2_div").fadeOut(200);
                 $("#casing3_div").fadeOut(200);
                 break;
         }
+    }
+
+    function disableCInputs(selected) {
+        switch (selected){
+            case 1:
+                $("#casing1_div :input").prop("disabled", false);
+                $("#casing2_div :input").prop("disabled", true);
+                $("#casing3_div :input").prop("disabled", true);
+                break;
+
+            case 2:
+                $("#casing1_div :input").prop("disabled", false);
+                $("#casing2_div :input").prop("disabled", false);
+                $("#casing3_div :input").prop("disabled", true);
+                break;
+
+            case 3:
+                $("#casing1_div :input").prop("disabled", false);
+                $("#casing2_div :input").prop("disabled", false);
+                $("#casing3_div :input").prop("disabled", false);
+                break;
+            case 0:
+                $("#casing1_div :input").prop("disabled", true);
+                $("#casing2_div :input").prop("disabled", true);
+                $("#casing3_div :input").prop("disabled", true);
+                break;
+        }
+
     }
 
     /**
@@ -867,12 +900,6 @@ require ("connection_db.php");
 
     function loadOD(id_outer_diameter, id_to_change, weight){
         var out_d = document.getElementById(id_outer_diameter).value;
-        console.log(out_d);
-        console.log(id_outer_diameter);
-        console.log(id_to_change);
-        console.log(weight);
-
-
 
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -884,7 +911,6 @@ require ("connection_db.php");
         req.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById(id_to_change).innerHTML += this.responseText;
-                console.log(this.responseText);
             }
         };
         req.open('POST','od_query.php',true);
@@ -910,7 +936,6 @@ require ("connection_db.php");
             }
         };
 
-        console.log("Diameter: " +diameter.toString());
         req.open('POST','weight_query.php',true);
         req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         req.send("diameter="+diameter.toString());
@@ -920,13 +945,16 @@ require ("connection_db.php");
     function loadPipe(id_od, id_weight, id_result){
         req = new XMLHttpRequest();
 
-        var od = $("#"+id_od).value;
-        var wght = $("#"+id_weight).value;
+        var od = $("#"+id_od).val();
+        var wght = $("#"+id_weight).val();
 
+        console.log("od:" +od);
+        console.log("weight:"+wght);
 
         req.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById(id_to_change).innerHTML += this.responseText;
+                console.log("response: "+this.responseText);
+                document.getElementById(id_result).innerHTML += this.responseText;
             }
         };
         req.open('POST', 'pipe.php',true);
@@ -936,12 +964,16 @@ require ("connection_db.php");
 
     }
 
-    function casingSeathChange(id_to_disable,id_to_enable) {
-
-
+    function casingSeathChange(selection,id_fluid,id_cement) {
+        if (selection == "Cement"){
+            $("#"+id_fluid).prop("disabled",true);
+            $("#"+id_cement).prop("disabled",false);
+        }
+        else if (selection == "Fluid"){
+            $("#"+id_cement).prop("disabled",true);
+            $("#"+id_fluid).prop("disabled",false);
+        }
     }
-
-
 
 </script>
 </body>
