@@ -35,7 +35,7 @@ require ("connection_db.php");
 
     <main class="centered_panel mdl-shadow--24dp border-radius--4 position--relative">
 
-        <form name="frm" action="simulation.php" onsubmit="return validate();" method="post" target="_blank">
+        <form id="myForm" name="frm" action="simulation.php" onsubmit="return validate();" method="post" target="_blank">
 
             <!-- General Section -->
             <div class="margin--8 border--1-solid-black border-radius--4 mdl-shadow--4dp inner_panel">
@@ -498,138 +498,142 @@ require ("connection_db.php");
                 </div>
 
                 <!-- Input Section -->
-                <div class="mdl-grid" id="id_gun_inputs">
+                <div class="" id="id_gun_inputs">
 
-                    <div class="display--inline-block mdl-cell--6-col">
+                    <div class="display--inline-block">
 
                         <!-- Company Select -->
                         <div class="margin--4">
 
                             <span class="mdl-card__supporting-text">API Certified Company (<span style="color: #fe1624;">*</span>)</span>
 
-                            <select class="float-right required_gun" name="api_company" size="" id="id_api_company">
+                            <select class="float-right required_gun" name="api_company" size="" id="id_api_company" onchange="">
 
                                 <option value="">Select</option>
-                                <!-- Traer base con ajax -->
-
-                            </select>
-
-                        </div>
-
-                        <!-- Charge Type Radios -->
-                        <div class="margin--4">
-
-                            <span class="mdl-card__supporting-text"><b>Charge Type (<span style="color: #fe1624;">*</span>)</b></span>
-
-                            <span class="mdl-card__supporting-text">DP</span>
-                            <input type="radio" class="required_gun_ctype" name="ctype" value="dp">
-
-                            <span class="mdl-card__supporting-text">BH</span>
-                            <input type="radio" class="required_gun_ctype" name="ctype" value="bh">
-
-                        </div>
-
-                        <!-- Gun Size Select -->
-                        <div class="margin--4">
-
-                            <span class="mdl-card__supporting-text">Gun Size (<span style="color: #fe1624;">*</span>)</span>
-
-                            <select class="float-right required_gun" name="gun_size" size="" id="id_gun_size">
-
-                                <option value="">Select</option>
-                                <!-- Traer base con ajax -->
-
-                            </select>
-
-                        </div>
-
-                        <!-- Shot Density Select -->
-                        <div class="margin--4">
-
-                            <span class="mdl-card__supporting-text">Shot Density (<span style="color: #fe1624;">*</span>)</span>
-
-                            <select class="float-right required_gun" name="shot_density" size="" id="id_shot_density">
-
-                                <option value="">Select</option>
-                                <!-- Traer base con ajax -->
-
-                            </select>
-
-                        </div>
-
-                        <!-- Gun Phase Select -->
-                        <div class="margin--4">
-
-                            <span class="mdl-card__supporting-text">Gun Phase (<span style="color: #fe1624;">*</span>)</span>
-
-                            <select class="float-right required_gun" name="gun_phase" size="" id="id_gun_phase">
-
-                                <option value="">Select</option>
-                                <!-- Traer base con ajax -->
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-                    <div class="display--inline-block mdl-cell--6-col">
-
-                        <!-- Charge Gram Weight Select -->
-                        <div class="margin--4">
-
-                            <span class="mdl-card__supporting-text">Charge Gram Weight (<span style="color: #fe1624;">*</span>)</span>
-
-                            <select class="float-right required_gun" name="charge_gram_weight" size="" id="id_charge_gram_weight">
-
-                                <option value="">Select</option>
-                                <!-- Traer base con ajax -->
-
-                            </select>
-
-                        </div>
-
-                        <!-- Charge Part Number Select -->
-                        <div class="margin--4">
-
-                            <span class="mdl-card__supporting-text">Charge Part Number (<span style="color: #fe1624;">*</span>)</span>
-
-                            <select class="float-right required_gun" name="charge_part_number" size="" id="id_charge_part_number">
-
-                                <option value="">Select</option>
-                                <!-- Traer base con ajax -->
-
-                            </select>
-
-                        </div>
-
-                        <!-- Explosive Select -->
-                        <div class="margin--4">
-
-                            <span class="mdl-card__supporting-text">Explosive (<span style="color: #fe1624;">*</span>)</span>
-
-                            <select class="float-right required_gun" name="explosive" size="" id="id_explosive">
-
-                                <option value="">Select</option>
-                                <!-- Traer base con ajax -->
+                                <?php
+                                $query = "SELECT DISTINCT GCOMPANYS FROM GUNS WHERE MODO='SI' ORDER BY GCOMPANYS";
+                                $res = mysqli_query($dbh, $query);
+                                while( $row = mysqli_fetch_row($res) ) {
+                                    echo "<option value='" . $row[0] . "'>" . $row[0] . "</option>";
+                                }
+                                ?>
 
                             </select>
                         </div>
 
-                        <!-- Gun Position Select -->
-                        <div class="margin--4">
+                        <div class="display--inline-block mdl-cell--6-col">
 
-                            <span class="mdl-card__supporting-text">Position (<span style="color: #fe1624;">*</span>)</span>
+                            <div class="margin--4">
 
-                            <select class="float-right required_gun" name="position" size="" id="id_position">
+                                <span class="mdl-card__supporting-text"><b>Charge Type (<span style="color: #fe1624;">*</span>)</b></span>
 
-                                <option value="">Select</option>
+                                <span class="mdl-card__supporting-text">DP</span>
+                                <input type="radio" class="required_gun_ctype" name="ctype" value="dp" onchange="loadGun()">
 
-                                <option value="Eccentered">Eccentered</option>
+                                <span class="mdl-card__supporting-text">BH</span>
+                                <input type="radio" class="required_gun_ctype" name="ctype" value="bh" onchange="loadGun()">
 
-                                <option value="Centered">Centered</option>
+                            </div>
 
-                            </select>
+                            <div class="margin--4">
+
+                                <span class="mdl-card__supporting-text">Gun Size (<span style="color: #fe1624;">*</span>)</span>
+
+                                <select class="float-right required_gun" name="gun_size" size="" id="id_gun_size">
+
+                                    <option value="">Select</option>
+                                    <!-- Traer base con ajax -->
+
+                                </select>
+
+                            </div>
+
+                            <!-- Shot Density Select -->
+                            <div class="margin--4">
+
+                                <span class="mdl-card__supporting-text">Shot Density (<span style="color: #fe1624;">*</span>)</span>
+
+                                <select class="required_gun float-right" name="shot_density" size="" id="id_shot_density">
+
+                                    <option value="">Select</option>
+                                    <!-- Traer base con ajax -->
+
+                                </select>
+
+                            </div>
+
+                            <!-- Gun Phase Select -->
+                            <div class="margin--4">
+
+                                <span class="mdl-card__supporting-text">Gun Phase (<span style="color: #fe1624;">*</span>)</span>
+
+                                <select class="float-right required_gun" name="gun_phase" size="" id="id_gun_phase">
+
+                                    <option value="">Select</option>
+                                    <!-- Traer base con ajax -->
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Charge Gram Weight Select -->
+                            <div class="margin--4">
+
+                                <span class="mdl-card__supporting-text">Charge Gram Weight (<span style="color: #fe1624;">*</span>)</span>
+
+                                <select class="float-right required_gun" name="charge_gram_weight" size="" id="id_charge_gram_weight">
+
+                                    <option value="">Select</option>
+                                    <!-- Traer base con ajax -->
+
+                                </select>
+
+                            </div>
+
+                            <!-- Charge Part Number Select -->
+                            <div class="margin--4">
+
+                                <span class="mdl-card__supporting-text">Charge Part Number (<span style="color: #fe1624;">*</span>)</span>
+
+                                <select class="float-right required_gun" name="charge_part_number" size="" id="id_charge_part_number">
+
+                                    <option value="">Select</option>
+                                    <!-- Traer base con ajax -->
+
+                                </select>
+
+                            </div>
+
+                            <!-- Explosive Select -->
+                            <div class="margin--4">
+
+                                <span class="mdl-card__supporting-text">Explosive (<span style="color: #fe1624;">*</span>)</span>
+
+                                <select class="float-right required_gun" name="explosive" size="" id="id_explosive">
+
+                                    <option value="">Select</option>
+                                    <!-- Traer base con ajax -->
+
+                                </select>
+                            </div>
+
+                            <!-- Gun Position Select -->
+                            <div class="margin--4">
+
+                                <span class="mdl-card__supporting-text">Position (<span style="color: #fe1624;">*</span>)</span>
+
+                                <select class="float-right required_gun" name="position" size="" id="id_position">
+
+                                    <option value="">Select</option>
+
+                                    <option value="Eccentered">Eccentered</option>
+
+                                    <option value="Centered">Centered</option>
+
+                                </select>
+
+                            </div>
 
                         </div>
 
@@ -707,8 +711,12 @@ require ("connection_db.php");
 
     $(document).ready(function(){
         $(".arrow_down").hide();
+
         $(".casing_div").fadeToggle("fast");
+
         $("#id_casings_value_1").selected = true;
+
+        loadCompanies();
     });
 
     /**
@@ -953,7 +961,6 @@ require ("connection_db.php");
 
         req.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                console.log("response: "+this.responseText);
                 document.getElementById(id_result).innerHTML += this.responseText;
             }
         };
@@ -973,6 +980,21 @@ require ("connection_db.php");
             $("#"+id_cement).prop("disabled",true);
             $("#"+id_fluid).prop("disabled",false);
         }
+    }
+
+    function loadGun() {
+        var company = $("#id_api_company").val();
+        var type = $('input[name=ctype]:checked', '#myForm').val()
+
+        req = new XMLHttpRequest();
+        req.open('POST','gunSize.php',true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.send('company='+company);
+        req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById().innerHTML += this.responseText;
+            }
+        };
     }
 
 </script>

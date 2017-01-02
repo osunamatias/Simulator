@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae4584b-23ef-4131-a674-cb2690f47e4c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gunSize.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index-new.php" afterPath="$PROJECT_DIR$/index-new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pipe.php" afterPath="$PROJECT_DIR$/pipe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weight_query.php" afterPath="$PROJECT_DIR$/weight_query.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,6 +39,23 @@
                 <marker date="1483115522954" expanded="true" signature="221:320" ph="SELECT DISTI... CASING" />
                 <marker date="1483115522954" expanded="true" signature="610:698" ph="SELECT DISTI... CASING" />
                 <marker date="1483115522954" expanded="true" signature="610:699" ph="SELECT DISTI... CASING" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="46" column="71" lean-forward="false" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+              <folding>
+                <marker date="1482840881962" expanded="true" signature="292:355" ph="UPDATE USERR... " />
+                <marker date="1482840881962" expanded="true" signature="1276:1347" ph="SELECT DISTI... GUNS" />
+                <marker date="1482840881962" expanded="true" signature="1434:1489" ph="SELECT DISTI... GUNS" />
+                <marker date="1482840881962" expanded="true" signature="1965:2013" ph="SELECT DISTI... CASING" />
+                <marker date="1482840881962" expanded="true" signature="19696:19766" ph="select * fro... DEFAULTS" />
+                <marker date="1482840881962" expanded="true" signature="22135:22189" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
               </folding>
             </state>
           </provider>
@@ -82,15 +98,57 @@
       <file leaf-file-name="index-new.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index-new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="718" column="32" lean-forward="true" selection-start-line="718" selection-start-column="32" selection-end-line="718" selection-end-column="32" />
+            <state relative-caret-position="410">
+              <caret line="994" column="40" lean-forward="false" selection-start-line="994" selection-start-column="40" selection-end-line="994" selection-end-column="40" />
               <folding>
-                <element signature="e#32060#32195#0#HTML" expanded="false" />
-                <element signature="e#37988#38737#0#HTML" expanded="false" />
-                <element signature="e#38096#38208#0#HTML" expanded="false" />
-                <element signature="e#38787#39456#0#HTML" expanded="false" />
-                <element signature="e#38824#38936#0#HTML" expanded="false" />
-                <marker date="1483369506808" expanded="true" signature="7801:7855" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#3;n#form#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#select#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#3;n#form#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#1;n#div#0;n#div#1;n#div#3;n#form#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#38619#39368#0#HTML" expanded="false" />
+                <element signature="e#38727#38839#0#HTML" expanded="false" />
+                <element signature="e#39418#40087#0#HTML" expanded="false" />
+                <element signature="e#39455#39567#0#HTML" expanded="false" />
+                <marker date="1483371494076" expanded="true" signature="7813:7867" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+                <marker date="1483371494076" expanded="true" signature="24295:24365" ph="SELECT DISTI... GUNS" />
+                <marker date="1483371494076" expanded="true" signature="29618:29644" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="29831:30027" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="29912:30027" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="29969:30027" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="30803:31244" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="30893:31244" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="31006:31244" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="31474:31714" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="31999:32216" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="32297:32597" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="32349:32583" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="32447:32568" ph="..." />
+                <marker date="1483371494076" expanded="true" signature="32663:32826" ph="{...}" />
+                <marker date="1483371494076" expanded="true" signature="32834:32953" ph="/** Method used to change the visibility of the ...*/" />
+                <marker date="1483371494076" expanded="true" signature="32997:33939" ph="{...}" />
+                <marker date="1483371494076" expanded="true" signature="33030:33933" ph="{...}" />
+                <marker date="1483371494076" expanded="true" signature="33979:34984" ph="{...}" />
+                <marker date="1483371494076" expanded="true" signature="34006:34977" ph="{...}" />
+                <marker date="1483371494076" expanded="true" signature="34990:35116" ph="/** Method used to change the value of the ...*/" />
+                <marker date="1483371494076" expanded="true" signature="35155:35205" ph="{...}" />
+                <marker date="1483371494076" expanded="true" signature="35211:35275" ph="/** Method to add the panel slide when the arrows are clicked ...*/" />
+                <marker date="1483371494076" expanded="true" signature="35310:35359" ph="{...}" />
+                <marker date="1483371494076" expanded="true" signature="35365:35428" ph="/** Method to change the arrow image alternating down and up ...*/" />
+                <marker date="1483371494076" expanded="true" signature="35487:35611" ph="{...}" />
+                <marker date="1483371494076" expanded="true" signature="35544:35602" ph="{...}" />
+                <marker date="1483371494076" expanded="true" signature="35617:35649" ph="/** Validating Casings Inputs ...*/" />
+                <marker date="1483371494076" expanded="true" signature="35678:35868" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gunSize.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gunSize.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#86#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,10 +199,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>borehole</find>
-      <find>casing_num</find>
-      <find>id_casing2_od</find>
-      <find>casing3_</find>
       <find>pipe</find>
       <find>loadpi</find>
       <find>pipe</find>
@@ -171,6 +225,10 @@
       <find>refres</find>
       <find>disables</find>
       <find>disableci</find>
+      <find>api</find>
+      <find>gun size</find>
+      <find>type</find>
+      <find>form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,6 +249,7 @@
         <option value="$PROJECT_DIR$/weight_query.php" />
         <option value="$USER_HOME$/Desktop/pipe.php" />
         <option value="$PROJECT_DIR$/pipe.php" />
+        <option value="$PROJECT_DIR$/gunSize.php" />
         <option value="$PROJECT_DIR$/index-new.php" />
       </list>
     </option>
@@ -361,12 +420,12 @@
       <workItem from="1483115230924" duration="6348000" />
       <workItem from="1483358415900" duration="1112000" />
       <workItem from="1483360378951" duration="721000" />
-      <workItem from="1483363601272" duration="5930000" />
+      <workItem from="1483363601272" duration="7886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42991000" />
+    <option name="totallyTimeSpent" value="44947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -413,13 +472,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/od_query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index-new.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -847,21 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11458">
-          <caret line="674" column="50" lean-forward="false" selection-start-line="674" selection-start-column="50" selection-end-line="674" selection-end-column="50" />
-          <folding>
-            <marker date="1482840881962" expanded="true" signature="292:355" ph="UPDATE USERR... " />
-            <marker date="1482840881962" expanded="true" signature="1276:1347" ph="SELECT DISTI... GUNS" />
-            <marker date="1482840881962" expanded="true" signature="1434:1489" ph="SELECT DISTI... GUNS" />
-            <marker date="1482840881962" expanded="true" signature="1965:2013" ph="SELECT DISTI... CASING" />
-            <marker date="1482840881962" expanded="true" signature="19696:19766" ph="select * fro... DEFAULTS" />
-            <marker date="1482840881962" expanded="true" signature="22135:22189" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/connection_db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -964,17 +1001,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="46" column="71" lean-forward="false" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+          <folding>
+            <marker date="1482840881962" expanded="true" signature="292:355" ph="UPDATE USERR... " />
+            <marker date="1482840881962" expanded="true" signature="1276:1347" ph="SELECT DISTI... GUNS" />
+            <marker date="1482840881962" expanded="true" signature="1434:1489" ph="SELECT DISTI... GUNS" />
+            <marker date="1482840881962" expanded="true" signature="1965:2013" ph="SELECT DISTI... CASING" />
+            <marker date="1482840881962" expanded="true" signature="19696:19766" ph="select * fro... DEFAULTS" />
+            <marker date="1482840881962" expanded="true" signature="22135:22189" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gunSize.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index-new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="718" column="32" lean-forward="true" selection-start-line="718" selection-start-column="32" selection-end-line="718" selection-end-column="32" />
+        <state relative-caret-position="410">
+          <caret line="994" column="40" lean-forward="false" selection-start-line="994" selection-start-column="40" selection-end-line="994" selection-end-column="40" />
           <folding>
-            <element signature="e#32060#32195#0#HTML" expanded="false" />
-            <element signature="e#37988#38737#0#HTML" expanded="false" />
-            <element signature="e#38096#38208#0#HTML" expanded="false" />
-            <element signature="e#38787#39456#0#HTML" expanded="false" />
-            <element signature="e#38824#38936#0#HTML" expanded="false" />
-            <marker date="1483369506808" expanded="true" signature="7801:7855" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#3;n#form#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#3;n#form#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#div#0;n#div#1;n#div#3;n#form#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#38619#39368#0#HTML" expanded="false" />
+            <element signature="e#38727#38839#0#HTML" expanded="false" />
+            <element signature="e#39418#40087#0#HTML" expanded="false" />
+            <element signature="e#39455#39567#0#HTML" expanded="false" />
+            <marker date="1483371494076" expanded="true" signature="7813:7867" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+            <marker date="1483371494076" expanded="true" signature="24295:24365" ph="SELECT DISTI... GUNS" />
+            <marker date="1483371494076" expanded="true" signature="29618:29644" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="29831:30027" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="29912:30027" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="29969:30027" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="30803:31244" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="30893:31244" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="31006:31244" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="31474:31714" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="31999:32216" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="32297:32597" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="32349:32583" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="32447:32568" ph="..." />
+            <marker date="1483371494076" expanded="true" signature="32663:32826" ph="{...}" />
+            <marker date="1483371494076" expanded="true" signature="32834:32953" ph="/** Method used to change the visibility of the ...*/" />
+            <marker date="1483371494076" expanded="true" signature="32997:33939" ph="{...}" />
+            <marker date="1483371494076" expanded="true" signature="33030:33933" ph="{...}" />
+            <marker date="1483371494076" expanded="true" signature="33979:34984" ph="{...}" />
+            <marker date="1483371494076" expanded="true" signature="34006:34977" ph="{...}" />
+            <marker date="1483371494076" expanded="true" signature="34990:35116" ph="/** Method used to change the value of the ...*/" />
+            <marker date="1483371494076" expanded="true" signature="35155:35205" ph="{...}" />
+            <marker date="1483371494076" expanded="true" signature="35211:35275" ph="/** Method to add the panel slide when the arrows are clicked ...*/" />
+            <marker date="1483371494076" expanded="true" signature="35310:35359" ph="{...}" />
+            <marker date="1483371494076" expanded="true" signature="35365:35428" ph="/** Method to change the arrow image alternating down and up ...*/" />
+            <marker date="1483371494076" expanded="true" signature="35487:35611" ph="{...}" />
+            <marker date="1483371494076" expanded="true" signature="35544:35602" ph="{...}" />
+            <marker date="1483371494076" expanded="true" signature="35617:35649" ph="/** Validating Casings Inputs ...*/" />
+            <marker date="1483371494076" expanded="true" signature="35678:35868" ph="{...}" />
           </folding>
         </state>
       </provider>
