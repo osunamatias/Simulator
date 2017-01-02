@@ -917,9 +917,27 @@ require ("connection_db.php");
 
     }
 
-    function loadPipe(){}
+    function loadPipe(id_od, id_weight, id_result){
+        req = new XMLHttpRequest();
+
+        var od = $("#"+id_od).value;
+        var wght = $("#"+id_weight).value;
+
+
+        req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById(id_to_change).innerHTML += this.responseText;
+            }
+        };
+        req.open('POST', 'pipe.php',true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.send('weight='+wght+"&od="+od);
+
+
+    }
 
     function casingSeathChange(id_to_disable,id_to_enable) {
+
 
     }
 

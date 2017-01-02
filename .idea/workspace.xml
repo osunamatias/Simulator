@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae4584b-23ef-4131-a674-cb2690f47e4c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Simulator/index-new.php" afterPath="$PROJECT_DIR$/Simulator/index-new.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pipe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index-new.php" afterPath="$PROJECT_DIR$/index-new.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -178,14 +179,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index-new.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index-new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index-new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="929" column="7" lean-forward="true" selection-start-line="929" selection-start-column="7" selection-end-line="929" selection-end-column="7" />
+            <state relative-caret-position="461">
+              <caret line="933" column="43" lean-forward="false" selection-start-line="933" selection-start-column="43" selection-end-line="933" selection-end-column="43" />
               <folding>
-                <marker date="1483361019963" expanded="true" signature="7801:7855" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+                <marker date="1483364642245" expanded="true" signature="7801:7855" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pipe.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pipe.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -398,12 +409,12 @@
       <workItem from="1483115230924" duration="6348000" />
       <workItem from="1483358415900" duration="1112000" />
       <workItem from="1483360378951" duration="721000" />
-      <workItem from="1483363601272" duration="16000" />
+      <workItem from="1483363601272" duration="1041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37077000" />
+    <option name="totallyTimeSpent" value="38102000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -450,13 +461,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/connection_db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/od.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1070,11 +1074,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index-new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="929" column="7" lean-forward="true" selection-start-line="929" selection-start-column="7" selection-end-line="929" selection-end-column="7" />
+        <state relative-caret-position="461">
+          <caret line="933" column="43" lean-forward="false" selection-start-line="933" selection-start-column="43" selection-end-line="933" selection-end-column="43" />
           <folding>
-            <marker date="1483361019963" expanded="true" signature="7801:7855" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+            <marker date="1483364642245" expanded="true" signature="7801:7855" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pipe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
