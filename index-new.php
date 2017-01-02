@@ -224,7 +224,7 @@ require ("connection_db.php");
 
                             <option value="">Select</option>
 
-                            <option value="1">1</option>
+                            <option id="id_casings_value_1" value="1">1</option>
 
                             <option value="2">2</option>
 
@@ -285,11 +285,11 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Sheath (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <select class="float-right required_casing_1" name="casing_seath" id="id_casing_seath">
+                                    <select class="float-right required_casing_1" name="casing_seath" id="id_casing_seath" onchange="casingSeathChange()">
 
                                         <option value="">Select</option>
-                                        <option value="dummy">Dummy</option>
-                                        <!-- Traer tabla con ajax -->
+                                        <option value="Cement">Cement</option>
+                                        <option value="Fluid">Fluid</option>
 
                                     </select>
 
@@ -328,7 +328,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Casing OD (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <select class="float-right required_casing_2" name="casing2_od" id="id_casing2_od" onchange="loadWeight(this.value,'casing2_weight')">
+                                    <select class="float-right required_casing_2" name="casing2_od" id="id_casing2_od" onchange="loadWeight(this.value,'id_casing2_weight')">
 
                                         <option value="">Select</option>
                                         <!-- Traer tabla con ajax -->
@@ -410,7 +410,7 @@ require ("connection_db.php");
 
                                     <span class="mdl-card__supporting-text">Casing OD (<span style="color: #fe1624;">*</span>)</span>
 
-                                    <select class="float-right required_casing_3" name="casing3_od" id="id_casing3_od" onchange="loadWeight(this.value,'casing3_weight')">
+                                    <select class="float-right required_casing_3" name="casing3_od" id="id_casing3_od" onchange="loadWeight(this.value,'id_casing3_weight')">
 
                                         <option value="">Select</option>
                                         <!-- Traer tabla con ajax -->
@@ -479,7 +479,6 @@ require ("connection_db.php");
                     </div>
                 </div>
             </div>
-
 
             <!-- Gun Section -->
             <div class="margin--8 border--1-solid-black border-radius--4 mdl-shadow--4dp inner_panel">
@@ -703,11 +702,12 @@ require ("connection_db.php");
 </div>
 
 <script>
+    var req;
 
     $(document).ready(function(){
         $(".arrow_down").hide();
         $(".casing_div").fadeToggle("fast");
-
+        $("#id_casings_value_1").selected = true;
     });
 
     /**
@@ -865,8 +865,6 @@ require ("connection_db.php");
         return result_correct;
     }
 
-
-    var req;
     function loadOD(id_outer_diameter, id_to_change, weight){
         var out_d = document.getElementById(id_outer_diameter).value;
         console.log(out_d);
@@ -885,11 +883,12 @@ require ("connection_db.php");
         }
         req.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById(id_to_change).append(this.responseText);
+                document.getElementById(id_to_change).innerHTML += this.responseText;
                 console.log(this.responseText);
             }
         };
         req.open('POST','od_query.php',true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         req.send("outer_value="+out_d+"&outer_weight="+weight);
 
 
@@ -897,17 +896,32 @@ require ("connection_db.php");
     }
 
     function loadWeight(diameter, id_to_change) {
-        $.post("weight_query.php",{
-            casing_diameter : diameter
-    },
-        function (data) {
-            if (status == "success") {
-                $("#"+id_to_change).innerHTML += data;
-            }
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            req = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            req = new ActiveXObject("Microsoft.XMLHTTP");
         }
-    );
+
+        req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById(id_to_change).innerHTML += this.responseText;
+            }
+        };
+
+        console.log("Diameter: " +diameter.toString());
+        req.open('POST','weight_query.php',true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.send("diameter="+diameter.toString());
+
     }
 
+    function loadPipe(){}
+
+    function casingSeathChange(id_to_disable,id_to_enable) {
+
+    }
 
 
 

@@ -900,9 +900,9 @@ require ("connection_db.php");
         $.post("weight_query.php",{
             casing_diameter : diameter
     },
-        function (data) {
+        function () {
             if (status == "success") {
-                $("#"+id_to_change).innerHTML += data;
+                $("#"+id_to_change).append(data);
             }
         }
     );
