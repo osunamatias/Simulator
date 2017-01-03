@@ -19,6 +19,10 @@ require ("connection_db.php");
     <script src="./JS/custom_script.js"></script>
 </head>
 <body class="custom_body">
+<div class="loader">
+    <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+</div>
+
 <div class="mdl-layout mdl-js-layout">
 
     <header class="mdl-layout__header mdl-layout__header--scroll mdl-shadow--16dp">
@@ -596,7 +600,7 @@ require ("connection_db.php");
 
                                 <span class="mdl-card__supporting-text">Charge Part Number (<span style="color: #fe1624;">*</span>)</span>
 
-                                <select class="float-right required_gun" name="charge_part_number" size="" id="id_cpn">
+                                <select class="float-right required_gun" name="charge_part_number" size="" id="id_cpn" onchange="loadExplosive()">
 
                                     <option value="">Select</option>
                                     <!-- Traer base con ajax -->
@@ -718,8 +722,10 @@ require ("connection_db.php");
     var charge_type;
     var gun_phase;
     var charge_gram;
-
+    var cpnum;
+    
     $(document).ready(function(){
+        $(".loader").fadeOut("slow");
         $(".arrow_down").hide();
 
         $(".casing_div").fadeToggle("fast");
@@ -844,7 +850,6 @@ require ("connection_db.php");
                 break;
 
             default:
-                alert("Select Casing Quantity");
                 $("#id_casing_quantity").focus();
                 booleanCasings = false;
                 break;
@@ -864,7 +869,6 @@ require ("connection_db.php");
         }
 
         if (length != count){
-            alert("Select One Type");
             array[0].focus();
             return false;
         }
@@ -1069,12 +1073,28 @@ require ("connection_db.php");
         req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         req.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                console.log("cpn: "+this.responseText);
                 document.getElementById("id_cpn").innerHTML += this.responseText;
             }
         };
         req.send("g_od="+gun_od+"&company="+company_name+"&ctype="+charge_type+"&s_dens="+shot_density+"&g_phase="+gun_phase+"&c_gram="+charge_gram);
     }
+
+    function loadExplosive(){
+        cpnum = $('#id_cpn').val();
+        console.log("cpnum:"+cpnum);
+
+        req = new XMLHttpRequest();
+        req.open('POST','./ajax/explosive_query.php',true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log("cpn: "+this.responseText);
+                document.getElementById("id_explosive").innerHTML += this.responseText;
+            }
+        };
+        req.send("g_od="+gun_od+"&company="+company_name+"&ctype="+charge_type+"&s_dens="+shot_density+"&g_phase="+gun_phase+"&c_gram="+charge_gram+"&cpn="+cpnum);
+
+    };
 
 </script>
 </body>

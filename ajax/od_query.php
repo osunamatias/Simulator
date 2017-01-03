@@ -7,30 +7,30 @@ $weight = $_POST['outer_weight'];
 $wall = null;
 
 
-$my_query1 = "SELECT DISTINCT WALL FROM CASING WHERE OD < " . $valor . " ORDER BY OD";
+$my_query1 = "SELECT DISTINCT WALL FROM CASING WHERE OD <= " . $valor . " ORDER BY OD";
 $my_query2 = "SELECT DISTINCT WALL FROM CASING WHERE OD < " . $valor . " AND WEIGHT = " . $weight . " ORDER BY OD";
 
 $consulta = null;
 
 if ($weight == 0 || $weight == null){
-    $consulta = mysqli_query($dbh, $my_query1);
+    $wall = 0;
 }
 else{
-    $consulta = mysqli_query($dbh, $my_query2);
+    $resWall = mysqli_query($dbh,$my_query2) or die(mysqli_error($dbh));
+    $row = mysqli_fetch_row($resWall);
+    $wall = $row[0];
 }
 
-if (mysqli_num_rows($consulta) > 0){
-    $row = mysqli_fetch_assoc($consulta);
-    $wall = $row["WALL"];
+$my_query3 = "SELECT DISTINCT OD, OD_TEXT FROM CASING WHERE OD < " . ($valor- (2*$wall)) . " ORDER BY OD";
+echo "wall:".(2*$wall);
+echo $my_query3;
+
+if ($result = mysqli_query($dbh,$my_query3) or die(mysqli_error($dbh))){
+    while ($row = mysqli_fetch_row($result)){
+        $od = $row[0];
+        $od_text = $row[1];
+        echo "<option value='$od'>$od_text</option>";
+    }
 }
-
-$my_query3 = "SELECT DISTINCT OD, OD_TEXT FROM CASING WHERE OD < " . ($valor- 2*$wall) . " ORDER BY OD";
-$consulta = mysqli_query($dbh, $my_query3);
-
-while($registro = mysqli_fetch_assoc($consulta)) {
-    echo "<option value='" . $registro["OD"] . "'>" . $registro["OD_TEXT"] . "</option>";
-}
-
-$dbh = null;
 
 ?>
