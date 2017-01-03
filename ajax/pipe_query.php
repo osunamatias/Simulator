@@ -6,7 +6,7 @@
  * Time: 10:43
  */
 
-require ("connection_db.php");
+require("../connection_db.php");
 
 $od = $_POST['od'];
 $weight = $_POST['weight'];

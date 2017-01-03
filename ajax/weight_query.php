@@ -1,5 +1,5 @@
 <?php
-require("connection_db.php");
+require("../connection_db.php");
 
 $valor = $_POST["diameter"];
 

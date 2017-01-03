@@ -1,6 +1,6 @@
 <?php
 
-require("connection_db.php");
+require("../connection_db.php");
 
 $valor = $_POST['outer_value'];
 $weight = $_POST['outer_weight'];

@@ -528,10 +528,10 @@ require ("connection_db.php");
                                 <span class="mdl-card__supporting-text"><b>Charge Type (<span style="color: #fe1624;">*</span>)</b></span>
 
                                 <span class="mdl-card__supporting-text">DP</span>
-                                <input type="radio" class="required_gun_ctype" name="ctype" value="dp" onchange="loadGun()">
+                                <input type="radio" class="required_gun_ctype" name="ctype" value="DP" onchange="loadGun()">
 
                                 <span class="mdl-card__supporting-text">BH</span>
-                                <input type="radio" class="required_gun_ctype" name="ctype" value="bh" onchange="loadGun()">
+                                <input type="radio" class="required_gun_ctype" name="ctype" value="BH" onchange="loadGun()">
 
                             </div>
 
@@ -567,7 +567,7 @@ require ("connection_db.php");
 
                                 <span class="mdl-card__supporting-text">Gun Phase (<span style="color: #fe1624;">*</span>)</span>
 
-                                <select class="float-right required_gun" name="gun_phase" size="" id="id_gun_phase">
+                                <select class="float-right required_gun" name="gun_phase" size="" id="id_gun_phase" onchange="loadChargeGram()">
 
                                     <option value="">Select</option>
                                     <!-- Traer base con ajax -->
@@ -582,7 +582,7 @@ require ("connection_db.php");
 
                                 <span class="mdl-card__supporting-text">Charge Gram Weight (<span style="color: #fe1624;">*</span>)</span>
 
-                                <select class="float-right required_gun" name="charge_gram_weight" size="" id="id_charge_gram_weight">
+                                <select class="float-right required_gun" name="charge_gram_weight" size="" id="id_charge_gram_weight" onchange="loadCPN()">
 
                                     <option value="">Select</option>
                                     <!-- Traer base con ajax -->
@@ -596,7 +596,7 @@ require ("connection_db.php");
 
                                 <span class="mdl-card__supporting-text">Charge Part Number (<span style="color: #fe1624;">*</span>)</span>
 
-                                <select class="float-right required_gun" name="charge_part_number" size="" id="id_charge_part_number">
+                                <select class="float-right required_gun" name="charge_part_number" size="" id="id_cpn">
 
                                     <option value="">Select</option>
                                     <!-- Traer base con ajax -->
@@ -710,12 +710,14 @@ require ("connection_db.php");
     //Global Variables
     var req;
 
-    var casing_cuantity;
-    var smaller_od_id;
+    var casing_cuantity = 1;
+    var smaller_od_id = "id_casing_od"
     var company_name;
     var gun_od;
     var shot_density;
     var charge_type;
+    var gun_phase;
+    var charge_gram;
 
     $(document).ready(function(){
         $(".arrow_down").hide();
@@ -723,8 +725,6 @@ require ("connection_db.php");
         $(".casing_div").fadeToggle("fast");
 
         $("#id_casings_value_1").selected = true;
-
-        loadCompanies();
     });
 
     /**
@@ -933,10 +933,11 @@ require ("connection_db.php");
         }
         req.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText);
                 document.getElementById(id_to_change).innerHTML += this.responseText;
             }
         };
-        req.open('POST','od_query.php',true);
+        req.open('POST','./ajax/od_query.php',true);
         req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         req.send("outer_value="+out_d+"&outer_weight="+weight);
 
@@ -959,7 +960,7 @@ require ("connection_db.php");
             }
         };
 
-        req.open('POST','weight_query.php',true);
+        req.open('POST','./ajax/weight_query.php',true);
         req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         req.send("diameter="+diameter.toString());
 
@@ -979,7 +980,7 @@ require ("connection_db.php");
                 document.getElementById(id_result).innerHTML += this.responseText;
             }
         };
-        req.open('POST', 'pipe.php',true);
+        req.open('POST', './ajax/pipe_query.php',true);
         req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         req.send('weight='+wght+"&od="+od);
 
@@ -1000,46 +1001,79 @@ require ("connection_db.php");
     function loadGun() {
         company_name = $("#id_api_company").val();
         charge_type = $('input[name=ctype]:checked', '#myForm').val()
-        smaller_od = $("#"+smaller_od_id);
+        var smaller_od = $("#"+smaller_od_id).val();
 
-        if ((!casing_cuantity == 0) && (smaller_od != null){
+        if ((!casing_cuantity == 0) && (smaller_od != null)){
             req = new XMLHttpRequest();
-            req.open('POST','gunSize.php',true);
+            req.open('POST','./ajax/gunSize_query.php',true);
             req.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
+                    console.log("Response Gun: "+this.responseText);
                     document.getElementById("id_gun_size").innerHTML += this.responseText;
                 }
             };
             req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            req.send('company='+company_name+"type="+type);
+            req.send('company='+company_name+"&type="+charge_type+"&od="+smaller_od);
 
         }
     }
 
     function loadShotDensity() {
-        gun_od = $("#id_gun_size");
+        gun_od = $("#id_gun_size").val();
 
         req = new XMLHttpRequest();
-        req.open('POST','sdensity_query.php',true);
+        req.open('POST','./ajax/sdensity_query.php',true);
         req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        req.onreadystatechange = changeInnerHTML(this,"id_shot_density")
-        req.send("g_od="+gun_od+"&company="company_name+"&ctype="+charge_type);
+        req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log("Response sdensity: "+this.responseText);
+                document.getElementById("id_shot_density").innerHTML += this.responseText;
+            }
+        };
+        req.send("g_od="+gun_od+"&company="+company_name+"&ctype="+charge_type);
     }
 
     function loadGunPhase() {
-        shot_density = $("#id_shot_density");
+        shot_density = $("#id_shot_density").val();
 
         req = new XMLHttpRequest();
-        req.open('POST','gunphase_query.php',true);
+        req.open('POST','./ajax/gunphase_query.php',true);
         req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        req.onreadystatechange = changeInnerHTML(this,"id_gun_phase");
-        req.send("g_od="+gun_od+"&company="company_name+"&ctype="+charge_type+"&s_dens="shot_density);
+        req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("id_gun_phase").innerHTML += this.responseText;
+            }
+        };
+        req.send("g_od="+gun_od+"&company="+company_name+"&ctype="+charge_type+"&s_dens="+shot_density);
     }
 
-    function changeInnerHTML(xml_instance, id_to_change) {
-        if (xml_instance.readyState == 4 && xml_instance.status == 200) {
-            document.getElementById(id_to_change).innerHTML += xml_instance.responseText;
-        }
+    function loadChargeGram() {
+        gun_phase = $('#id_gun_phase').val();
+
+        req = new XMLHttpRequest();
+        req.open('POST','./ajax/charge_query.php',true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("id_charge_gram_weight").innerHTML += this.responseText;
+            }
+        };
+        req.send("g_od="+gun_od+"&company="+company_name+"&ctype="+charge_type+"&s_dens="+shot_density+"&g_phase="+gun_phase);
+    }
+
+    function loadCPN() {
+        charge_gram = $('#id_charge_gram_weight').val();
+
+        req = new XMLHttpRequest();
+        req.open('POST','./ajax/cpn_query.php',true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log("cpn: "+this.responseText);
+                document.getElementById("id_cpn").innerHTML += this.responseText;
+            }
+        };
+        req.send("g_od="+gun_od+"&company="+company_name+"&ctype="+charge_type+"&s_dens="+shot_density+"&g_phase="+gun_phase+"&c_gram="+charge_gram);
     }
 
 </script>

@@ -2,47 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc10dd5c-41a4-4dbc-961b-5b11066e68d0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gunphase_query.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sdensity_query.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/.idea/Simulator.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/CSS/css_properties.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/CSS/custom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/CSS/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/CSS/material.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/CSS/material.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/CSS/material.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/Fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/Fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/Fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/Fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/Fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/Fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/JS/custom_script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/JS/jquery-3.1.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/JS/material.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/JS/material.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/connectionDB.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/connection_db.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/images/icons/arrow_down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/images/icons/arrow_up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/index-new(2).php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/index-new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/indexCopy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/mm_menu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/od.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/od_query.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/simulation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/weight.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Simulator/weight_query.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gunSize.php" afterPath="$PROJECT_DIR$/gunSize.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/charge_query.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/cpn_query.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gunSize.php" afterPath="$PROJECT_DIR$/ajax/gunSize_query.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gunphase_query.php" afterPath="$PROJECT_DIR$/ajax/gunphase_query.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/od_query.php" afterPath="$PROJECT_DIR$/ajax/od_query.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pipe.php" afterPath="$PROJECT_DIR$/ajax/pipe_query.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sdensity_query.php" afterPath="$PROJECT_DIR$/ajax/sdensity_query.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/weight_query.php" afterPath="$PROJECT_DIR$/ajax/weight_query.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index-new.php" afterPath="$PROJECT_DIR$/index-new.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,75 +26,80 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gunSize.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gunSize.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
-              <folding>
-                <marker date="1483447470328" expanded="true" signature="215:265" ph="SELECT DISTI... GUNS" />
-                <marker date="1483447470328" expanded="true" signature="215:266" ph="SELECT DISTI... GUNS" />
-                <marker date="1483447470328" expanded="true" signature="215:287" ph="SELECT DISTI... GUNS" />
-                <marker date="1483447470328" expanded="true" signature="215:288" ph="SELECT DISTI... GUNS" />
-                <marker date="1483447470328" expanded="true" signature="215:305" ph="SELECT DISTI... GUNS" />
-                <marker date="1483447470328" expanded="true" signature="215:306" ph="SELECT DISTI... GUNS" />
-                <marker date="1483447470328" expanded="true" signature="215:333" ph="SELECT DISTI... GUNS" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pipe.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pipe.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-              <folding>
-                <marker date="1483443881539" expanded="true" signature="180:277" ph="SELECT DISTI... CASING" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index-new.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index-new.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index-new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17510">
-              <caret line="1030" column="0" lean-forward="false" selection-start-line="1030" selection-start-column="0" selection-end-line="1030" selection-end-column="0" />
+            <state relative-caret-position="320">
+              <caret line="1071" column="55" lean-forward="false" selection-start-line="1071" selection-start-column="55" selection-end-line="1071" selection-end-column="55" />
               <folding>
-                <marker date="1483448386508" expanded="true" signature="7813:7867" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
-                <marker date="1483448386508" expanded="true" signature="24295:24365" ph="SELECT DISTI... GUNS" />
+                <marker date="1483454223536" expanded="true" signature="7813:7867" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+                <marker date="1483454223536" expanded="true" signature="24295:24365" ph="SELECT DISTI... GUNS" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="charge_query.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/charge_query.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#86#0#PHP" expanded="true" />
+                <marker date="1483454130882" expanded="true" signature="280:440" ph="SELECT DISTI... GUNS" />
+                <marker date="1483454130882" expanded="true" signature="280:445" ph="SELECT DISTI... GUNS" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cpn_query.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/cpn_query.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="122" lean-forward="false" selection-start-line="18" selection-start-column="122" selection-end-line="18" selection-end-column="122" />
+              <folding>
+                <element signature="e#6#86#0#PHP" expanded="true" />
+                <marker date="1483454262425" expanded="true" signature="313:496" ph="SELECT DISTI... GUNS" />
+                <marker date="1483454262425" expanded="true" signature="313:499" ph="SELECT DISTI... GUNS" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="gunphase_query.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gunphase_query.php">
+        <entry file="file://$PROJECT_DIR$/ajax/gunphase_query.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="149" lean-forward="false" selection-start-line="15" selection-start-column="149" selection-end-line="15" selection-end-column="149" />
+            <state relative-caret-position="289">
+              <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding>
                 <element signature="e#6#85#0#PHP" expanded="true" />
-                <marker date="1483448459777" expanded="true" signature="245:376" ph="SELECT DISTI... GUNS" />
-                <marker date="1483448459777" expanded="true" signature="245:382" ph="SELECT DISTI... GUNS" />
+                <marker date="1483453533838" expanded="true" signature="247:385" ph="SELECT DISTI... GUNS" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sdensity_query.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sdensity_query.php">
+      <file leaf-file-name="sdensity_query.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/sdensity_query.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="238">
+              <caret line="14" column="128" lean-forward="false" selection-start-line="14" selection-start-column="128" selection-end-line="14" selection-end-column="128" />
               <folding>
                 <element signature="e#6#85#0#PHP" expanded="true" />
-                <marker date="1483448127582" expanded="true" signature="214:260" ph="SELECT DISTI... GUNS" />
-                <marker date="1483448127582" expanded="true" signature="214:261" ph="SELECT DISTI... GUNS" />
-                <marker date="1483448127582" expanded="true" signature="214:302" ph="SELECT DISTI... GUNS" />
-                <marker date="1483448127582" expanded="true" signature="214:303" ph="SELECT DISTI... GUNS" />
-                <marker date="1483448127582" expanded="true" signature="214:325" ph="SELECT DISTI... GUNS" />
+                <marker date="1483454130835" expanded="true" signature="216:330" ph="SELECT DISTI... GUNS" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weight_query.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/weight_query.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1483453533782" expanded="true" signature="84:160" ph="SELECT DISTI... casing" />
               </folding>
             </state>
           </provider>
@@ -136,7 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gun size</find>
       <find>casing_od</find>
       <find>id_casing2_od</find>
       <find>changesh</find>
@@ -146,7 +118,22 @@
       <find>loadGunPhase</find>
       <find>loadgP</find>
       <find>id_gun_pha</find>
+      <find>Charge Gram</find>
+      <find>loadcompan</find>
+      <find>loadcompa</find>
+      <find>bh</find>
+      <find>gun size</find>
+      <find>explo</find>
+      <find>id_casing_od</find>
+      <find>xml</find>
+      <find>ajax</find>
+      <find>ajax_queries</find>
+      <find>cpn</find>
+      <find>loadcpn</find>
     </findStrings>
+    <replaceStrings>
+      <replace>ajax</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -155,9 +142,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/gunSize.php" />
-        <option value="$PROJECT_DIR$/sdensity_query.php" />
-        <option value="$PROJECT_DIR$/index-new.php" />
         <option value="$PROJECT_DIR$/gunphase_query.php" />
+        <option value="$PROJECT_DIR$/sdensity_query.php" />
+        <option value="$PROJECT_DIR$/charge_query.php" />
+        <option value="$PROJECT_DIR$/ajax/gunphase_query.php" />
+        <option value="$PROJECT_DIR$/ajax/gunSize_query.php" />
+        <option value="$PROJECT_DIR$/ajax/od_query.php" />
+        <option value="$PROJECT_DIR$/ajax/pipe_query.php" />
+        <option value="$PROJECT_DIR$/ajax/weight_query.php" />
+        <option value="$PROJECT_DIR$/ajax/sdensity_query.php" />
+        <option value="$PROJECT_DIR$/ajax/charge_query.php" />
+        <option value="$PROJECT_DIR$/index-new.php" />
+        <option value="$PROJECT_DIR$/ajax/cpn_query.php" />
       </list>
     </option>
   </component>
@@ -189,20 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Simulator">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -217,6 +199,34 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Simulator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Simulator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ajax">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -224,6 +234,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Sim\Simulator\ajax_queries" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -295,17 +310,18 @@
       <updated>1483443955563</updated>
       <workItem from="1483443964778" duration="4687000" />
       <workItem from="1483448789188" duration="24000" />
+      <workItem from="1483449438842" duration="4790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4711000" />
+    <option name="totallyTimeSpent" value="9501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -335,28 +351,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gunSize.php">
+    <entry file="file://$PROJECT_DIR$/ajax/gunSize_query.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
           <folding>
-            <marker date="1483447470328" expanded="true" signature="215:265" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:266" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:287" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:288" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:305" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:306" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:333" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:272" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:273" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:282" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:344" ph="SELECT DISTI... GUNS" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pipe.php">
+    <entry file="file://$PROJECT_DIR$/ajax/pipe_query.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
-            <marker date="1483443881539" expanded="true" signature="180:277" ph="SELECT DISTI... CASING" />
+            <marker date="1483453533749" expanded="true" signature="182:279" ph="SELECT DISTI... CASING" />
           </folding>
         </state>
       </provider>
@@ -366,86 +379,53 @@
         <state relative-caret-position="17510">
           <caret line="1030" column="0" lean-forward="false" selection-start-line="1030" selection-start-column="0" selection-end-line="1030" selection-end-column="0" />
           <folding>
-            <marker date="1483448386508" expanded="true" signature="7813:7867" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
-            <marker date="1483448386508" expanded="true" signature="24295:24365" ph="SELECT DISTI... GUNS" />
+            <marker date="1483454223536" expanded="true" signature="7813:7867" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+            <marker date="1483454223536" expanded="true" signature="24295:24365" ph="SELECT DISTI... GUNS" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gunphase_query.php">
+    <entry file="file://$PROJECT_DIR$/ajax/gunphase_query.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="170">
           <caret line="15" column="149" lean-forward="false" selection-start-line="15" selection-start-column="149" selection-end-line="15" selection-end-column="149" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1483448459777" expanded="true" signature="245:376" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448459777" expanded="true" signature="245:382" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533838" expanded="true" signature="247:385" ph="SELECT DISTI... GUNS" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdensity_query.php">
+    <entry file="file://$PROJECT_DIR$/ajax/sdensity_query.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1483448127582" expanded="true" signature="214:260" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448127582" expanded="true" signature="214:261" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448127582" expanded="true" signature="214:302" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448127582" expanded="true" signature="214:303" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448127582" expanded="true" signature="214:325" ph="SELECT DISTI... GUNS" />
+            <marker date="1483454130835" expanded="true" signature="216:330" ph="SELECT DISTI... GUNS" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/od_query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <marker date="1483443881537" expanded="true" signature="134:204" ph="SELECT DISTI... CASING" />
-            <marker date="1483443881537" expanded="true" signature="221:320" ph="SELECT DISTI... CASING" />
-            <marker date="1483443881537" expanded="true" signature="610:698" ph="SELECT DISTI... CASING" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pipe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <marker date="1483443881539" expanded="true" signature="180:277" ph="SELECT DISTI... CASING" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax.js" />
-    <entry file="file://$PROJECT_DIR$/gunphase_query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="149" lean-forward="false" selection-start-line="15" selection-start-column="149" selection-end-line="15" selection-end-column="149" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1483448459777" expanded="true" signature="245:376" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448459777" expanded="true" signature="245:382" ph="SELECT DISTI... GUNS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gunSize.php">
+    <entry file="file://$PROJECT_DIR$/ajax/gunSize_query.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
           <folding>
-            <marker date="1483447470328" expanded="true" signature="215:265" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:266" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:287" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:288" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:305" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:306" ph="SELECT DISTI... GUNS" />
-            <marker date="1483447470328" expanded="true" signature="215:333" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:272" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:273" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:282" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:344" ph="SELECT DISTI... GUNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/pipe_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <marker date="1483453533749" expanded="true" signature="182:279" ph="SELECT DISTI... CASING" />
           </folding>
         </state>
       </provider>
@@ -455,23 +435,144 @@
         <state relative-caret-position="17510">
           <caret line="1030" column="0" lean-forward="false" selection-start-line="1030" selection-start-column="0" selection-end-line="1030" selection-end-column="0" />
           <folding>
+            <marker date="1483454223536" expanded="true" signature="7813:7867" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+            <marker date="1483454223536" expanded="true" signature="24295:24365" ph="SELECT DISTI... GUNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/gunphase_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="149" lean-forward="false" selection-start-line="15" selection-start-column="149" selection-end-line="15" selection-end-column="149" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+            <marker date="1483453533838" expanded="true" signature="247:385" ph="SELECT DISTI... GUNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/sdensity_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+            <marker date="1483454130835" expanded="true" signature="216:330" ph="SELECT DISTI... GUNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax.js" />
+    <entry file="file://$USER_HOME$/Desktop/Nueva carpeta/index-new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="726" column="18" lean-forward="false" selection-start-line="726" selection-start-column="8" selection-end-line="726" selection-end-column="18" />
+          <folding>
             <marker date="1483448386508" expanded="true" signature="7813:7867" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
             <marker date="1483448386508" expanded="true" signature="24295:24365" ph="SELECT DISTI... GUNS" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdensity_query.php">
+    <entry file="file://$PROJECT_DIR$/ajax/gunSize_query.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="51">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <marker date="1483453533615" expanded="true" signature="217:272" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:273" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:282" ph="SELECT DISTI... GUNS" />
+            <marker date="1483453533615" expanded="true" signature="217:344" ph="SELECT DISTI... GUNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/od_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding>
+            <marker date="1483453533706" expanded="true" signature="137:207" ph="SELECT DISTI... CASING" />
+            <marker date="1483453533706" expanded="true" signature="224:323" ph="SELECT DISTI... CASING" />
+            <marker date="1483453533706" expanded="true" signature="613:701" ph="SELECT DISTI... CASING" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/pipe_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <marker date="1483453533749" expanded="true" signature="182:279" ph="SELECT DISTI... CASING" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/sdensity_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="128" lean-forward="false" selection-start-line="14" selection-start-column="128" selection-end-line="14" selection-end-column="128" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1483448127582" expanded="true" signature="214:260" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448127582" expanded="true" signature="214:261" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448127582" expanded="true" signature="214:302" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448127582" expanded="true" signature="214:303" ph="SELECT DISTI... GUNS" />
-            <marker date="1483448127582" expanded="true" signature="214:325" ph="SELECT DISTI... GUNS" />
+            <marker date="1483454130835" expanded="true" signature="216:330" ph="SELECT DISTI... GUNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/weight_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1483453533782" expanded="true" signature="84:160" ph="SELECT DISTI... casing" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/gunphase_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+            <marker date="1483453533838" expanded="true" signature="247:385" ph="SELECT DISTI... GUNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/charge_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <marker date="1483454130882" expanded="true" signature="280:440" ph="SELECT DISTI... GUNS" />
+            <marker date="1483454130882" expanded="true" signature="280:445" ph="SELECT DISTI... GUNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/cpn_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="122" lean-forward="false" selection-start-line="18" selection-start-column="122" selection-end-line="18" selection-end-column="122" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <marker date="1483454262425" expanded="true" signature="313:496" ph="SELECT DISTI... GUNS" />
+            <marker date="1483454262425" expanded="true" signature="313:499" ph="SELECT DISTI... GUNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index-new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="1071" column="55" lean-forward="false" selection-start-line="1071" selection-start-column="55" selection-end-line="1071" selection-end-column="55" />
+          <folding>
+            <marker date="1483454223536" expanded="true" signature="7813:7867" ph="SELECT OD, V... BOREHOLE_DIAMETER" />
+            <marker date="1483454223536" expanded="true" signature="24295:24365" ph="SELECT DISTI... GUNS" />
           </folding>
         </state>
       </provider>
