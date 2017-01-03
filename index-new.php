@@ -539,7 +539,7 @@ require ("connection_db.php");
 
                                 <span class="mdl-card__supporting-text">Gun Size (<span style="color: #fe1624;">*</span>)</span>
 
-                                <select class="float-right required_gun" name="gun_size" size="" id="id_gun_size">
+                                <select class="float-right required_gun" name="gun_size" size="" id="id_gun_size" onchange="loadShotDensity()">
 
                                     <option value="">Select</option>
                                     <!-- Traer base con ajax -->
@@ -553,7 +553,7 @@ require ("connection_db.php");
 
                                 <span class="mdl-card__supporting-text">Shot Density (<span style="color: #fe1624;">*</span>)</span>
 
-                                <select class="required_gun float-right" name="shot_density" size="" id="id_shot_density">
+                                <select class="required_gun float-right" name="shot_density" size="" id="id_shot_density" onchange="loadGunPhase()">
 
                                     <option value="">Select</option>
                                     <!-- Traer base con ajax -->
@@ -707,7 +707,15 @@ require ("connection_db.php");
 </div>
 
 <script>
+    //Global Variables
     var req;
+
+    var casing_cuantity;
+    var smaller_od_id;
+    var company_name;
+    var gun_od;
+    var shot_density;
+    var charge_type;
 
     $(document).ready(function(){
         $(".arrow_down").hide();
@@ -726,6 +734,8 @@ require ("connection_db.php");
     function refreshCasings(casing_number) {
         switch (casing_number) {
             case "1":
+                casing_cuantity = 1;
+                smaller_od_id = "id_casing_od";
                 disableCInputs(1);
                 $("#casing1_div").fadeIn(200);
                 $("#casing2_div").fadeOut(200);
@@ -733,6 +743,8 @@ require ("connection_db.php");
                 break;
 
             case "2":
+                casing_cuantity = 2;
+                smaller_od_id = "id_casing2_od";
                 disableCInputs(2);
                 $("#casing1_div").fadeIn(200);
                 $("#casing2_div").fadeIn(200);
@@ -740,13 +752,16 @@ require ("connection_db.php");
                 break;
 
             case "3":
+                casing_cuantity = 3;
+                smaller_od_id = "id_casing3_od";
                 disableCInputs(3);
                 $("#casing1_div").fadeIn(200);
                 $("#casing2_div").fadeIn(200);
                 $("#casing3_div").fadeIn(200);
                 break;
 
-            case "":
+            default:
+                casing_cuantity = 0
                 disableCInputs(0);
                 $("#casing1_div").fadeOut(200);
                 $("#casing2_div").fadeOut(200);
@@ -983,18 +998,48 @@ require ("connection_db.php");
     }
 
     function loadGun() {
-        var company = $("#id_api_company").val();
-        var type = $('input[name=ctype]:checked', '#myForm').val()
+        company_name = $("#id_api_company").val();
+        charge_type = $('input[name=ctype]:checked', '#myForm').val()
+        smaller_od = $("#"+smaller_od_id);
+
+        if ((!casing_cuantity == 0) && (smaller_od != null){
+            req = new XMLHttpRequest();
+            req.open('POST','gunSize.php',true);
+            req.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("id_gun_size").innerHTML += this.responseText;
+                }
+            };
+            req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            req.send('company='+company_name+"type="+type);
+
+        }
+    }
+
+    function loadShotDensity() {
+        gun_od = $("#id_gun_size");
 
         req = new XMLHttpRequest();
-        req.open('POST','gunSize.php',true);
+        req.open('POST','sdensity_query.php',true);
         req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        req.send('company='+company);
-        req.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById().innerHTML += this.responseText;
-            }
-        };
+        req.onreadystatechange = changeInnerHTML(this,"id_shot_density")
+        req.send("g_od="+gun_od+"&company="company_name+"&ctype="+charge_type);
+    }
+
+    function loadGunPhase() {
+        shot_density = $("#id_shot_density");
+
+        req = new XMLHttpRequest();
+        req.open('POST','gunphase_query.php',true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.onreadystatechange = changeInnerHTML(this,"id_gun_phase");
+        req.send("g_od="+gun_od+"&company="company_name+"&ctype="+charge_type+"&s_dens="shot_density);
+    }
+
+    function changeInnerHTML(xml_instance, id_to_change) {
+        if (xml_instance.readyState == 4 && xml_instance.status == 200) {
+            document.getElementById(id_to_change).innerHTML += xml_instance.responseText;
+        }
     }
 
 </script>
