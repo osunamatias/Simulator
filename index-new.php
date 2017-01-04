@@ -18,11 +18,8 @@ require ("connection_db.php");
     <script src="./JS/jquery-3.1.1.min.js"></script>
     <script src="./JS/custom_script.js"></script>
 </head>
-<body class="custom_body">
-<div class="loader">
-    <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
-</div>
 
+<body class="custom_body">
 <div class="mdl-layout mdl-js-layout">
 
     <header class="mdl-layout__header mdl-layout__header--scroll mdl-shadow--16dp">
@@ -178,7 +175,7 @@ require ("connection_db.php");
 
                             <span class="mdl-card__supporting-text">Depth to Bottom Shot (<span style="color: #fe1624;">*</span>)</span>
 
-                            <input class="float-right required_formation" min="0" max="100000" type="number" step="any">
+                            <input class="float-right required_formation" id="id_bottom_shot" min="0" max="100000" type="number" step="any" value="0" onblur="verifyShots()">
 
                         </div>
 
@@ -186,8 +183,10 @@ require ("connection_db.php");
 
                             <span class="mdl-card__supporting-text">Depth to Top Shot (<span style="color: #fe1624;">*</span>)</span>
 
-                            <input class="float-right required_formation" min="0" max="100000" type="number" step="any">
-
+                            <div class="float-right">
+                                <input class="required_formation" id="id_top_shot" min="0" max="100000" type="number" step="any" value="0" onblur="verifyShots()">
+                                <a class="display--none mdl-badge mdl-badge--overlap" data-badge="1" id="id_badge_shots"></a>
+                            </div>
                         </div>
 
                         <div class="margin--4">
@@ -680,7 +679,11 @@ require ("connection_db.php");
                         <!-- Formation Porosity -->
                         <div class="margin--4">
                             <span class="mdl-card__supporting-text">Formation Porosity (<span style="color: #fe1624;">*</span>)</span>
-                            <input class="float-right required_calculation" onchange="disableInput(this,'id_compressive_input')" id="id_porosity_input" type="number" step="any" min="0" max="10000">
+                            <div class="float-right">
+                                <input class="required_calculation" onchange="disableInput(this,'id_compressive_input'); verifyPorosity()" id="id_porosity_input" type="number" step="any" min="0" max="10000">
+                                <a class="display--none mdl-badge mdl-badge--overlap" data-badge="2" id="id_badge_porosity"></a>
+                            </div>
+
                         </div>
 
                     </div>
@@ -690,7 +693,13 @@ require ("connection_db.php");
 
             <!-- Submit Button -->
             <div class="submit--btn-div inner_panel">
-                <span class="required_info">(<span style="color: #fe1624;">*</span>): Required Fields</span>
+                <div class="float-left" style="font-size: 12px">
+                    <span class="required_info">(<span style="color: #fe1624;">*</span>): Required Fields</span><br>
+                    <span class="display--none required_info" id="shots_info">(<span style="color: #fe1624;">1</span>): Top Shot can't be greater than Bottom shot</span><br>
+                    <span class="display--none required_info" id="porosity_info">(<span style="color: #fe1624;">2</span>): Porosity must be greater than 5 and less than 35</span><br>
+
+                </div>
+
                 <input type="submit" class="myButton mdl-shadow--8dp" value="Calculate">
             </div>
 
@@ -723,9 +732,9 @@ require ("connection_db.php");
     var gun_phase;
     var charge_gram;
     var cpnum;
-    
+
     $(document).ready(function(){
-        $(".loader").fadeOut("slow");
+        //$(".loader").fadeOut("slow");
         $(".arrow_down").hide();
 
         $(".casing_div").fadeToggle("fast");
@@ -1095,6 +1104,38 @@ require ("connection_db.php");
         req.send("g_od="+gun_od+"&company="+company_name+"&ctype="+charge_type+"&s_dens="+shot_density+"&g_phase="+gun_phase+"&c_gram="+charge_gram+"&cpn="+cpnum);
 
     };
+
+    function verifyShots() {
+        var bshot = $('#id_bottom_shot').val();
+        var tshot = $('#id_top_shot').val();
+
+        if (bshot < tshot){
+            $('#id_badge_shots').fadeIn();
+            $('#shots_info').fadeIn();
+        }
+        else {
+            $('#id_badge_shots').fadeOut();
+            $('#shots_info').fadeOut();
+        }
+    }
+
+    function verifyPorosity() {
+        var min = 5;
+        var max = 35;
+        var value = $('#id_porosity_input').val();
+        console.log("Value: "+value);
+
+        if(value < min || value > max){
+            console.log("true");
+            $('#id_badge_porosity').fadeIn();
+            $('#porosity_info').fadeIn();
+        }
+        else {
+            $('#id_badge_porosity').fadeOut();
+            $('#porosity_info').fadeOut();
+
+        }
+    }
 
 </script>
 </body>
